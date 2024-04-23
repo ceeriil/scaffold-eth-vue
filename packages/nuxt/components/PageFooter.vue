@@ -9,6 +9,7 @@
             <div>
               <div class="btn btn-primary btn-sm font-normal gap-1 cursor-auto">
                 <CurrencyDollarIcon class="h-4 w-4" />
+                <BeakerIcon class="h-6 w-6 text-blue-500" />
                 <span> 3344 </span>
               </div>
             </div>
@@ -73,4 +74,6 @@
   </div>
 </template>
 
-<script></script>
+<script setup lang="ts">
+import { BeakerIcon } from "@heroicons/vue/24/solid";
+</script>

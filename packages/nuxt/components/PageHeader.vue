@@ -30,7 +30,7 @@
         class="hidden lg:flex items-center gap-2 ml-4 mr-6 shrink-0"
       >
         <div class="flex relative w-10 h-10">
-          <Image alt="SE2 logo" class="cursor-pointer" fill src="/logo.svg" />
+          <img alt="SE2 logo" class="cursor-pointer" fill src="/logo.svg" />
         </div>
         <div class="flex flex-col">
           <span class="font-bold leading-tight">Scaffold-ETH</span>
@@ -51,41 +51,41 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted } from "vue";
 
-const isDrawerOpen = ref(false)
-const burgerMenuRef = ref(null)
+const isDrawerOpen = ref(false);
+const burgerMenuRef = ref(null);
 
 const toggleDrawer = () => {
-  isDrawerOpen.value = !isDrawerOpen.value
-}
+  isDrawerOpen.value = !isDrawerOpen.value;
+};
 
 const closeDrawer = () => {
-  isDrawerOpen.value = false
-}
+  isDrawerOpen.value = false;
+};
 
 const handleClickOutside = (event) => {
   if (burgerMenuRef.value && !burgerMenuRef.value.contains(event.target)) {
-    closeDrawer()
+    closeDrawer();
   }
-}
+};
 
 onMounted(() => {
-  document.addEventListener('click', handleClickOutside)
-})
+  document.addEventListener("click", handleClickOutside);
+});
 
 onUnmounted(() => {
-  document.removeEventListener('click', handleClickOutside)
-})
+  document.removeEventListener("click", handleClickOutside);
+});
 
 const menuLinks = [
   {
-    label: 'Home',
-    href: '/',
+    label: "Home",
+    href: "/",
   },
   {
-    label: 'Debug Contracts',
-    href: '/debug',
+    label: "Debug Contracts",
+    href: "/debug",
   },
-]
+];
 </script>

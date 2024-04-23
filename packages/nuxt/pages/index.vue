@@ -3,9 +3,9 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import * as Vue from "vue";
 
-export default Vue.extend({
-  name: 'IndexPage',
-})
+export default {
+  name: "HomePage",
+};
 </script>
