@@ -7,6 +7,12 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  components: [
+    {
+      path: "~/components",
+      pathPrefix: false,
+    },
+  ],
   // Target: https://go.nuxtjs.dev/config-target
 
   // Global page headers: https://go.nuxtjs.dev/config-head

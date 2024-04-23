@@ -6,20 +6,21 @@
         <span class="block text-4xl font-bold">Scaffold-ETH 2 Vue</span>
       </h1>
       <p class="text-center text-lg">
-        Get started by editing{" "}
+        Get started by editing
         <code
           class="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block"
         >
-          packages/nuxtjs/app/page.tsx
+          packages/nuxtjs/pages/index.tsx
         </code>
       </p>
       <p class="text-center text-lg">
-        Edit your smart contract{" "}
+        Edit your smart contract
         <code
           class="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block"
         >
-          YourContract.sol </code
-        >{" "} in{" "}
+          YourContract.sol
+        </code>
+        in
         <code
           class="italic bg-base-300 text-base font-bold max-w-full break-words break-all inline-block"
         >
@@ -33,13 +34,13 @@
         <div
           class="flex flex-col bg-base-100 px-10 py-10 text-center items-center max-w-xs rounded-3xl"
         >
-          <BugAntIcon className="h-8 w-8 fill-secondary" />
-
+          <BugAntIcon class="h-8 w-8 fill-secondary" />
           <p>
-            Tinker with your smart contract using the{" "}
+            Tinker with your smart contract using the
             <NuxtLink to="/debug" passHref class="link">
-              Debug Contract </NuxtLink
-            >{" "} tab.
+              Debug Contract
+            </NuxtLink>
+            tab.
           </p>
         </div>
         <div
@@ -47,10 +48,11 @@
         >
           <MagnifyingGlassIcon class="h-8 w-8 fill-secondary" />
           <p>
-            Explore your local transactions with the{" "}
+            Explore your local transactions with the
             <NuxtLink to="/blockexplorer" passHref class="link">
-              Block Explorer </NuxtLink
-            >{" "} tab.
+              Block Explorer
+            </NuxtLink>
+            tab.
           </p>
         </div>
       </div>
@@ -58,8 +60,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'NuxtTutorial',
-}
+<script setup>
+import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/vue/24/outline";
 </script>

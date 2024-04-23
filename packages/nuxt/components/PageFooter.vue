@@ -5,26 +5,20 @@
         class="fixed flex justify-between items-center w-full z-10 p-4 bottom-0 left-0 pointer-events-none"
       >
         <div class="flex flex-col md:flex-row gap-2 pointer-events-auto">
-          <template>
             <div>
               <div class="btn btn-primary btn-sm font-normal gap-1 cursor-auto">
                 <CurrencyDollarIcon class="h-4 w-4" />
-                <BeakerIcon class="h-6 w-6 text-blue-500" />
-                <span> 3344 </span>
+                <span>3500.25</span>
               </div>
             </div>
-          </template>
-          <template>
-            <EthFaucet />
-            <Link
-              href="/blockexplorer"
-              passHref
+           <EthFaucet />
+           <NuxtLink
+              to="/blockexplorer"
               class="btn btn-primary btn-sm font-normal gap-1"
             >
               <MagnifyingGlassIcon class="h-4 w-4" />
-              <span>Block Explorer</span>
-            </Link>
-          </template>
+              <span>Block Explorer </span>
+            </NuxtLink>
         </div>
         <SwitchTheme />
       </div>
@@ -75,5 +69,6 @@
 </template>
 
 <script setup lang="ts">
-import { BeakerIcon } from "@heroicons/vue/24/solid";
+import { CurrencyDollarIcon, MagnifyingGlassIcon, HeartIcon } from "@heroicons/vue/24/outline";
+import BuidlGuidlLogo from "../assets/css/BuidlGuidlLogo.vue";
 </script>
