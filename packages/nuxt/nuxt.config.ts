@@ -27,7 +27,12 @@ export default defineNuxtConfig({
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ["@nuxtjs/color-mode"],
+  colorMode: {
+    classSuffix: "",
+    preference: "light",
+    fallback: "light",
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},

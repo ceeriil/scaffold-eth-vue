@@ -1,10 +1,10 @@
 <template>
-     <div :class="`flex space-x-2 text-sm ${className}`">
+  <div :class="`flex space-x-2 text-sm pointer-events-auto`">
     <input
       id="theme-toggle"
       type="checkbox"
       class="toggle toggle-primary bg-primary hover:bg-primary border-primary"
-      @change="toggle"
+      @click="ToggleBtn"
       :checked="isDarkMode"
     />
     <label v-if="isMounted" for="theme-toggle" :class="`swap swap-rotate ${!isDarkMode ? 'swap-active' : ''}`">
@@ -17,6 +17,7 @@
 <script>
 import { ref, onMounted } from 'vue';
 import { MoonIcon, SunIcon } from "@heroicons/vue/24/outline";
+import { useDark, useToggle, useMounted } from '@vueuse/core';
 
 export default {
   props: {
@@ -26,8 +27,17 @@ export default {
     }
   },
   setup() {
-    const { isDarkMode, toggle } = false;
-    const isMounted = ref(false);
+    const isDarkMode = ref(true)
+    const toggle = useToggle(isDarkMode)
+    
+    const ToggleBtn = () => {
+      console.log("lol")
+      isDarkMode.value = !isDarkMode.value
+      const body = document.body;
+      body.setAttribute("data-theme", isDarkMode.value ? "scaffoldEthDark" : "scaffoldEth");
+    }
+    
+    const isMounted = useMounted();
 
     onMounted(() => {
       const body = document.body;
@@ -35,10 +45,13 @@ export default {
       isMounted.value = true;
     });
 
+
+
     return {
       isDarkMode,
       toggle,
-      isMounted
+      isMounted,
+      ToggleBtn
     };
   },
   components: {
